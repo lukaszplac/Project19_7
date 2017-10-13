@@ -14,13 +14,13 @@ export function comments(state = [], action ) {
 					newCommentsState.find(comment => comment.id === action.id).comment = action.comment;
 					return newCommentsState;
 		case a.REMOVE_COMMENT:
-					newCommentsState = state.comments.filter(comment => comment.id !== action.id);
+					newCommentsState = state.filter(comment => comment.id !== action.id);
 					return newCommentsState;
 		case a.THUMB_UP:
-					newCommentsState.find(comment => comment.id === action.id).votes += action.votes;
+					newCommentsState.find(comment => comment.id === action.id).votes += 1;
 					return newCommentsState;
 		case a.THUMB_DOWN:
-					newCommentsState.find(comment => comment.id === action.id).votes -= action.votes;
+					newCommentsState.find(comment => comment.id === action.id).votes -= 1;
 					return newCommentsState;
 		default:
 					return state;

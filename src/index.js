@@ -7,9 +7,6 @@ import { Provider } from 'react-redux';
 import {store} from './store/store.js';
 import * as a from './store/actions.js';
 
-store.dispatch(a.addComment('pierwszy komentarz'));
-store.dispatch(a.addComment('drugi komentarz'));
-
 
 let render = () => ReactDOM.render(
   <Provider store={store}>
@@ -19,9 +16,11 @@ let render = () => ReactDOM.render(
 );
 store.subscribe(render);
 
-
-store.dispatch(a.addComment('trzeci komentarz'));
-store.dispatch(a.addComment('czwarty komentarz'));
+store.dispatch(a.addComment('pierwszy komentarz'));
+store.dispatch(a.addComment('drugi komentarz2'));
+store.dispatch(a.addComment('drugi komentarz3'));
+store.dispatch(a.addComment('drugi komentarz4'));
+store.dispatch(a.addComment('drugi komentarz5'));
 
 registerServiceWorker();
 

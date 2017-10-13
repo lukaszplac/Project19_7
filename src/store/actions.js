@@ -33,7 +33,6 @@ export function thumbUp(id) {
 	return {
 		type: THUMB_UP,
 		id: id,
-		votes: 1
 	}
 }
 
@@ -41,6 +40,5 @@ export function thumbDown(id) {
 	return {
 		type: THUMB_DOWN,
 		id: id,
-		votes: 1
 	}
 }
