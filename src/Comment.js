@@ -1,5 +1,7 @@
 import React from 'react';
 
-const Comment = ({text, votes}) => <li>{text} <span>votes: {votes}</span></li>;
+const Comment = ({comment, votes}) => {
+	return (<li>{comment} <span>votes: {votes}</span></li>);
+};
 
 export default Comment;

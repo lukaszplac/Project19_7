@@ -6,7 +6,9 @@ import CommentsListContainer from './CommentsListContainer';
 const App = () => {
   return (
     <div className="App">
-    	<CommentsListContainer/>
+    	<CommentsListContainer>
+    		<CommentsList />
+    	</CommentsListContainer>
     </div>
   );
 };
